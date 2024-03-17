@@ -7,7 +7,7 @@ import coffeeAnimation from "./coffee-animation.json";
 
 function Hero() {
   return (
-    <div className="!flex h-[55vh] w-full items-center justify-between px-10" style={{ marginTop: "30px" }}>
+    <div className="!flex h-[55vh] w-full items-center justify-between px-10" style={{ marginTop: "130px" }}>
       <Image
         width={1200}
         height={1200}
@@ -33,7 +33,7 @@ function Hero() {
               />
               <Lottie
                 animationData={coffeeAnimation} loop={true}
-                style={{ height: "80px", display: "inline", flex: "left", top: "20px", right: "0", position: "absolute" }}
+                style={{ height: "80px", display: "inline", flex: "left", top: "10px", right: "0", position: "absolute" }}
               />
             </div>
             <Typography
