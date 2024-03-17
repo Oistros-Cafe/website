@@ -14,7 +14,7 @@ function TESTIMONIAL() {
               <Image
                 width={768}
                 height={768}
-                src="/website/image/oistros-2.JPG"
+                src="/image/oistros-2.JPG"
                 alt="testimonial image"
                 className="w-full h-full scale-110 object-cover"
               />

@@ -11,7 +11,7 @@ function Hero() {
       <Image
         width={1200}
         height={1200}
-        src="/website/image/coffee-hero.jpeg"
+        src="/image/coffee-hero.jpeg"
         alt="bg-img"
         className="absolute inset-0 ml-auto w-[920px] h-[780px] rounded-bl-[100px] object-cover object-center"
       />
@@ -27,7 +27,7 @@ function Hero() {
                 width={144}
                 height={144}
                 className="w-36 grayscale opacity-60"
-                src="/website/image/oistros-logo-2.png"
+                src="/image/oistros-logo-2.png"
                 alt="pinterest"
                 style={{ float: "right", margin: "10px 0", flex: "right", position: "relative" }}
               />
