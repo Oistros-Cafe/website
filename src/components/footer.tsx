@@ -9,19 +9,19 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-3 !w-full ">
           
           <div className="">
-            <Typography variant="h6" className="mb-3 text-left">
+            <Typography variant="h6" className="mb-3 text-left"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               Θέλετε να λαμβάνετε νέα μας;
             </Typography>
-            <Typography className="!text-gray-500 font-normal mb-4 text-base">
+            <Typography className="!text-gray-500 font-normal mb-4 text-base"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               Δώστε μας το email σας για να σας στέλνουμε νέα και προσφορές από τον Οίστρο.
             </Typography>
-            <Typography variant="small" className="font-medium mb-2 text-left">
+            <Typography variant="small" className="font-medium mb-2 text-left"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               Το e-mail σας
             </Typography>
             <div className="flex mb-3 flex-col lg:flex-row items-start gap-4">
               <div className="w-full">
-                <Input label="Email" color="gray" />
-                <Typography className="font-medium mt-3 !text-sm !text-gray-500 text-left">
+                <Input label="Email" color="gray" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined} />
+                <Typography className="font-medium mt-3 !text-sm !text-gray-500 text-left"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                   Συμφωνώ με τους{" "}
                   <a
                     href="#"
@@ -31,7 +31,7 @@ export function Footer() {
                   </a>
                 </Typography>
               </div>
-              <Button color="gray" className="w-full lg:w-fit" size="md">
+              <Button color="gray" className="w-full lg:w-fit" size="md"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 Εγγραφή
               </Button>
             </div>
@@ -39,8 +39,7 @@ export function Footer() {
         </div>
         <Typography
           color="blue-gray"
-          className="md:text-center mt-16 font-normal !text-gray-700"
-        >
+          className="md:text-center mt-16 font-normal !text-gray-700"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           &copy; {CURRENT_YEAR} Made with{" "}
           <a href="https://www.material-tailwind.com" target="_blank">
             Material Tailwind

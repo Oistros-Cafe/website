@@ -17,35 +17,36 @@ function Hero() {
       />
       <div className="container mx-auto mt-28">
         <div className="grid grid-cols-12 text-center lg:text-left">
-          <Card className="col-span-full rounded-xl border border-white bg-white/90 py-10 p-8 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7">
+          <Card 
+          className="col-span-full rounded-xl border border-white bg-white/90 py-10 p-8 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7" 
+          placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-between gap-4 lg:justify-start flex">
-              
-            <Image
+
+              <Image
                 width={144}
                 height={144}
                 className="w-36 grayscale opacity-60"
                 src="/image/oistros-logo-2.png"
                 alt="pinterest"
-                style={{ float: "right", margin: "10px 0",flex:"right", position: "relative" }}
+                style={{ float: "right", margin: "10px 0", flex: "right", position: "relative" }}
               />
               <Lottie
                 animationData={coffeeAnimation} loop={true}
-                style={{ height: "80px", display: "inline", flex:"left", top:"20px", right:"0", position: "absolute" }}
+                style={{ height: "80px", display: "inline", flex: "left", top: "20px", right: "0", position: "absolute" }}
               />
             </div>
             <Typography
               variant="h1"
               color="blue-gray"
-              className="lg:text-5xl !leading-snug text-3xl lg:max-w-3xl syne-800"
-            >
+              className="lg:text-5xl !leading-snug text-3xl lg:max-w-3xl syne-800" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
               Ανακαλύψτε την ποικιλία καφέ που σας ταιριάζει.
             </Typography>
-            <Typography variant="lead" className="mb-10 mt-6 !text-gray-900 syne-400">
+            <Typography variant="lead" className="mb-10 mt-6 !text-gray-900 syne-400" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               4 ποικιλίες speciality coffee και παραπάνω από 10 ποικιλίες αρωματικού καφέ περιμένουν να τις εξερευνήσετε στο καινούριο μας ηλεκτρονικό κατάστημα.
             </Typography>
             <div className="mb-8 flex justify-center gap-4 lg:justify-start syne-400">
-              <Button color="yellow">Εξερευνήστε τώρα</Button>
+              <Button color="yellow"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>Εξερευνήστε τώρα</Button>
             </div>
           </Card>
         </div>
