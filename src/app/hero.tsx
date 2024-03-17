@@ -21,8 +21,7 @@ function Hero() {
           className="col-span-full rounded-xl border border-white bg-white/90 py-10 p-8 shadow-lg shadow-black/10 backdrop-blur-sm backdrop-saturate-200 xl:col-span-7" 
           placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-between gap-4 lg:justify-start flex">
-
+            <div className="justify-between gap-4 lg:justify-start flex">
               <Image
                 width={144}
                 height={144}
@@ -33,7 +32,7 @@ function Hero() {
               />
               <Lottie
                 animationData={coffeeAnimation} loop={true}
-                style={{ height: "80px", display: "inline", flex: "left", top: "10px", right: "0", position: "absolute" }}
+                style={{ height: "60px", width: "80px", marginLeft:"auto" }}
               />
             </div>
             <Typography
