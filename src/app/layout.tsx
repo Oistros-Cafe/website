@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./styles/globals.scss";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Layout } from "@/components";
@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: "Oistros Cafe",
   description:
     "Oistros Cafe - E-shop",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
 };
 
 export default function RootLayout({
@@ -35,7 +41,7 @@ export default function RootLayout({
         <meta property="og:image:width" content="1024"/>
         <meta property="og:image:height" content="684"/>
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} antialiased`}>
         <Layout>
           {children}
         </Layout>
