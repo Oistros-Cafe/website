@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function TESTIMONIAL() {
+function Testimonial() {
   return (
     <section className="px-8 py-20 md:py-40 bg-[#f8f5f0]">
       <AnimatePresence>
@@ -93,4 +93,4 @@ function TESTIMONIAL() {
   );
 }
 
-export default TESTIMONIAL;
+export default Testimonial;

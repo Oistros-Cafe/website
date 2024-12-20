@@ -6,7 +6,7 @@ import { FaCertificate } from "react-icons/fa";
 import { GiCoffeeBeans } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 
-function QUALIFICATIONS() {
+function Qualifications() {
   const certifications = [
     {
       title: "SCA Coffee Skills Program",
@@ -114,4 +114,4 @@ function QUALIFICATIONS() {
   );
 }
 
-export default QUALIFICATIONS; 
+export default Qualifications; 
