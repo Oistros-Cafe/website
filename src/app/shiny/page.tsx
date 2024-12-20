@@ -1,5 +1,8 @@
+import type { NextPage } from 'next';
 import ShinyPage from "../shiny-page";
 
-export default function Page() {
+const Page: NextPage = () => {
   return <ShinyPage />;
-} 
+};
+
+export default Page; 
