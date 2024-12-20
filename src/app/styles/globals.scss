@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+// Breakpoints
+$breakpoints: (
+  'sm': 640px,   // Small devices (phones)
+  'md': 768px,   // Medium devices (tablets)
+  'lg': 1024px,  // Large devices (laptops)
+  'xl': 1280px,  // Extra large devices
+  '2xl': 1536px  // 2X large devices
+);
+
+// Mixins for media queries
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Common spacing units (using rem for better scaling)
+:root {
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  
+  /* Container widths */
+  --container-padding: 1rem;
+  
+  @include breakpoint('md') {
+    --container-padding: 2rem;
+  }
+  
+  @include breakpoint('lg') {
+    --container-padding: 4rem;
+  }
+}
+
 .syne-400 {
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
@@ -15,8 +52,6 @@
     font-weight: 800;
     font-style: normal;
 }
-
-@import './styles/variables.scss';
 
 /* Reset and base styles */
 * {
@@ -57,11 +92,11 @@ img {
 h1 {
   font-size: 1.75rem; /* 28px */
   
-  @media (min-width: 768px) {
+  @include breakpoint('md') {
     font-size: 2.25rem; /* 36px */
   }
   
-  @media (min-width: 1024px) {
+  @include breakpoint('lg') {
     font-size: 3rem; /* 48px */
   }
 }
@@ -69,11 +104,11 @@ h1 {
 h2 {
   font-size: 1.5rem; /* 24px */
   
-  @media (min-width: 768px) {
+  @include breakpoint('md') {
     font-size: 1.875rem; /* 30px */
   }
   
-  @media (min-width: 1024px) {
+  @include breakpoint('lg') {
     font-size: 2.25rem; /* 36px */
   }
 }
@@ -92,15 +127,15 @@ h2 {
 
 .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
 
-@media (min-width: 640px) {
+@include breakpoint('sm') {
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (min-width: 768px) {
+@include breakpoint('md') {
   .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (min-width: 1024px) {
+@include breakpoint('lg') {
   .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
@@ -114,12 +149,39 @@ h2 {
 /* Hide/Show elements based on screen size */
 .hidden { display: none; }
 
-@media (min-width: 640px) {
+@include breakpoint('sm') {
   .sm\:block { display: block; }
   .sm\:hidden { display: none; }
 }
 
-@media (min-width: 768px) {
+@include breakpoint('md') {
   .md\:block { display: block; }
   .md\:hidden { display: none; }
 }
+
+/* Add these styles for the testimonial section */
+.testimonial {
+  position: relative;
+  z-index: 1;
+  
+  &__image {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 2; /* Higher z-index to ensure text stays above image */
+    background-color: inherit; /* Or any specific background color */
+  }
+}
+
+/* If you're using a grid or flex layout, you might also want to add: */
+@include breakpoint('md') {
+  .testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+} 
