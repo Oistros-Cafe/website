@@ -1,5 +1,13 @@
+'use client';
+
+import dynamic from 'next/dynamic';
 import type { NextPage } from 'next';
-import ShinyPage from "../shiny-page";
+
+// Dynamically import components with no SSR
+const ShinyPage = dynamic(
+  () => import("../shiny-page"),
+  { ssr: false }
+);
 
 const Page: NextPage = () => {
   return <ShinyPage />;
