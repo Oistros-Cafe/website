@@ -141,7 +141,7 @@ export default function CoffeeExplorer() {
   };
 
   return (
-    <section className="px-8 py-20 bg-white">
+    <section className="px-8 py-20 bg-transparent">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <Typography variant="h2" className="text-[#2C1810] syne-800 mb-4" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>

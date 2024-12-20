@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Testimonial() {
   return (
-    <section className="px-8 py-20 md:py-40 bg-[#f8f5f0]">
+    <section className="px-8 py-20 md:py-40 bg-transparent">
       <AnimatePresence>
         <motion.div 
           className="container mx-auto syne-400"

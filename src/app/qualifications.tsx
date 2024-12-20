@@ -29,7 +29,7 @@ function Qualifications() {
   ];
 
   return (
-    <section className="px-8 py-20 bg-white">
+    <section className="px-8 py-20 bg-transparent">
       <AnimatePresence>
         <motion.div 
           className="container mx-auto syne-400"
@@ -98,7 +98,7 @@ function Qualifications() {
               <div className="relative h-[300px] rounded-xl overflow-hidden">
                 <Image
                   fill
-                  src="/image/coffee-roasting.jpg"
+                  src="/image/coffee-saucer.jpg"
                   alt="Coffee Roasting Process"
                   className="object-cover transition-transform duration-300 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
