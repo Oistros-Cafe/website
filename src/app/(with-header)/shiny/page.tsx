@@ -5,7 +5,7 @@ import type { NextPage } from 'next';
 
 // Dynamically import components with no SSR
 const ShinyPage = dynamic(
-  () => import("../shiny-page"),
+  () => import("../../shiny-page"),
   { ssr: false }
 );
 
