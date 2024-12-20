@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Typography } from "@material-tailwind/react";
+import dynamic from 'next/dynamic';
+
+// Dynamically import Typography with no SSR
+const Typography = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.Typography),
+  { ssr: false }
+);
 
 interface FlavorCategory {
   name: string;
@@ -55,7 +61,7 @@ const flavorWheel: FlavorCategory[] = [
         descriptors: ["Μέλι", "Σιρόπι", "Ζάχαρη"]
       },
       {
-        name: "Σοκολάτα",
+        name: "Σο��ολάτα",
         descriptors: ["Κακάο", "Σκούρα Σοκολάτα", "Πραλίνα"]
       }
     ]

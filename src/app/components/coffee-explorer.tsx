@@ -2,11 +2,36 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Typography, Card, CardBody, Button, Chip } from "@material-tailwind/react";
-import { FaCertificate } from "react-icons/fa";
+import dynamic from 'next/dynamic';
 import { GiCoffeeBeans } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
 import CoffeeFlavorWheel from "./coffee-flavor-wheel";
+
+// Dynamically import Material Tailwind components with no SSR
+const Typography = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.Typography),
+  { ssr: false }
+);
+
+const Card = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.Card),
+  { ssr: false }
+);
+
+const CardBody = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.CardBody),
+  { ssr: false }
+);
+
+const Button = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.Button),
+  { ssr: false }
+);
+
+const Chip = dynamic(
+  () => import("@material-tailwind/react").then((mod) => mod.Chip),
+  { ssr: false }
+);
 
 interface CoffeeBean {
   id: number;
@@ -28,7 +53,7 @@ const coffeeBeans: CoffeeBean[] = [
     roastLevel: "Ελαφρύ",
     flavorNotes: ["Άνθη Γιασεμιού", "Εσπεριδοειδή", "Βερίκοκο"],
     flavorCategories: ["Φρουτώδη", "Λουλουδάτα"],
-    description: "Ένας εξαιρετικά αρωματικός καφές με λουλουδάτες νότες και φωτεινή οξύτη��α.",
+    description: "Ένας εξαιρετικά αρωματικός καφές με λουλουδάτες νότες και φωτεινή οξύτητα.",
     price: 8.50,
     image: "/image/coffee-beans/ethiopia.jpg"
   },
@@ -61,7 +86,7 @@ const coffeeBeans: CoffeeBean[] = [
     roastLevel: "Ελαφρύ",
     flavorNotes: ["Μαύρο Φραγκοστάφυλο", "Δαμάσκηνο", "Μαύρο Τσάι"],
     flavorCategories: ["Φρουτώδη"],
-    description: "Έντονη φρουτώδης γεύση με ��ωηρή οξύτητα και πολύπλοκο χαρακτήρα.",
+    description: "Έντονη φρουτώδης γεύση με ωηρή οξύτητα και πολύπλοκο χαρακτήρα.",
     price: 9.50,
     image: "/image/coffee-beans/kenya.jpg"
   },
